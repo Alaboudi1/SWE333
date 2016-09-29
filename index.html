@@ -1,0 +1,36 @@
+<html>
+
+<body>
+
+    <lable for="N1">FirstNumber:</lable><input type="text" id="N1">
+    <lable for="O1">Operation:</lable>
+    <select name="carlist" id="O1">
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="/">/</option>
+  <option value="*">*</option>
+</select>
+    <lable for="N2">SecondNumber:</lable><input type="text" id="N2">
+
+  <input type="button" onclick="Cal()" value="calculate">
+
+ <lable id="R1"></lable>
+ 
+
+</body>
+
+<script>
+
+function Cal(){
+var N1, N2,op,result;
+
+  N1 = Number(document.getElementById("N1").value);
+  N2 = Number(document.getElementById("N2").value);
+  op = document.getElementById("O1").value
+  
+  result="Result: "+eval(N1 +op+ N2)
+    document.getElementById("R1").innerHTML=result;
+}
+</script>
+
+</html>
